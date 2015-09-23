@@ -1,13 +1,13 @@
-open STDIN, "../files/Part1.txt";
 
-# Store successive lines into $_
+# The loop reads all of the file into $text
+$text="";
 while (<STDIN>)
 {
-    # Loop over matches in $_
-    #  Option g = global (all matches)
-    while (m/(\d{3}-\d{2}-\d{4})/g)
-    {
-        # Print the capture groups
-        print "$1\n";
-    }
+	$text .= $_;
 }
+
+# Replace each comment with "COMMENT"
+#  Option g = global (replace all matches)
+#  Option s = let . match newlines
+$text =~ s!(\s\d{3}-\d{2}-\d{4}\s)! ###-##-#### !gm;
+print $text;
