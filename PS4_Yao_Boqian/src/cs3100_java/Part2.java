@@ -18,17 +18,19 @@ public class Part2
 		try (Scanner s = new Scanner(System.in))
 		{
 		    
-			Pattern p = Pattern.compile("(//[\\d\\D]*[\\d\\D]*.*?)", Pattern.DOTALL);
+			Pattern p = Pattern.compile("//.*");
 			
-			
+			String document="";
+			String result = "";
 			while (s.hasNextLine())
 			{
-				Matcher m = p.matcher(s.nextLine());			
-			    String result = m.replaceAll("");
-				System.out.println(result);
+				document = s.nextLine();
+				 Matcher m = p.matcher(document);			
+			    result += m.replaceAll("")+"\n";
 						
 			}
-					
+			   
+				System.out.println(result);		
 		}
 	}
 }

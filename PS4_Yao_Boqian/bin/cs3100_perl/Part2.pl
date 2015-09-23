@@ -8,5 +8,5 @@ while (<STDIN>)
 # Replace each comment with "COMMENT"
 #  Option g = global (replace all matches)
 #  Option s = let . match newlines
-$text =~ s!(//\s*[\D|\d|\s]*?.*?)!COMMENT!gs;
+$text =~ s!(//[\D|\d|\s]*)!COMMENT!gs;
 print $text;
