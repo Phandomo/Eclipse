@@ -1,0 +1,25 @@
+This line // contains a &*^%$ comment
+This line does not contain a comment
+This line contains // the beginning
+of a comment but the end doesn't come
+for a few more // lines
+This // line */ contains /* two */ comments
+// Create a Scanner to read from the test file
+		URL url = Class.class.getResource("/files/Part2.txt");
+		try (Scanner s = new Scanner(url.openStream()))
+		{
+		    
+			Pattern p = Pattern.compile("(//[\\d\\D]*[\\d\\D]*)", Pattern.DOTALL);
+
+			1// Pull the entire document into a string
+			
+			while (s.hasNextLine())
+			{
+			    //hsdfhsidhfoisdhfsobd
+				Matcher m = p.matcher(s.nextLine());			
+			    String result = m.replaceAll("");
+				//asaasaaas aaaaaaa  
+				System.out.println(result);
+			
+				
+			}
