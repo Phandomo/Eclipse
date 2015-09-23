@@ -15,9 +15,7 @@ public class Part2
      */
 	public static void main (String[] args) throws IOException
 	{
-	    // Create a Scanner to read from the test file
-		URL url = Class.class.getResource("/files/Part2.txt");
-		try (Scanner s = new Scanner(url.openStream()))
+		try (Scanner s = new Scanner(System.in))
 		{
 		    
 			Pattern p = Pattern.compile("(//[\\d\\D]*[\\d\\D]*.*?)", Pattern.DOTALL);
@@ -30,10 +28,7 @@ public class Part2
 				System.out.println(result);
 						
 			}
-			String sss = "//lalala\nlalala";
-			Matcher m = p.matcher(sss);
-			String result = m.replaceAll("");			
-			System.out.println(result);
+					
 		}
 	}
 }

@@ -1,4 +1,3 @@
-open STDIN, "../files/Part2.txt";
 
 # The loop reads all of the file into $text
 while (<STDIN>)

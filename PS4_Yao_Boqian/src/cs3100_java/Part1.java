@@ -1,6 +1,5 @@
 package cs3100_java;
 import java.io.IOException;
-import java.net.URL;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
