@@ -5,8 +5,7 @@ while (<STDIN>)
 	$text .= $_;
 }
 
-# Replace each comment with "COMMENT"
+# Replace each comment with ""
 #  Option g = global (replace all matches)
-#  Option s = let . match newlines
-$text =~ s!(//[\D|\d|\s]*)!COMMENT!gs;
+$text =~ s!(//.*)!!g;
 print $text;
